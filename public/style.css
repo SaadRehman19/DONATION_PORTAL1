@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navdiv a {
+    display: inline-block;
+    text-decoration: none;
+    /* color:#ffff; */
+    font-size: 18px;
+}
+
+.container {
+    margin: auto;
+    padding: 0 1rem;
+}
+
+
+/* HEADER */
+
+#header {
+    background-color: bisque;
+    /* background:rgba(156, 101, 156, 0.2); */
+}
+
+#header img {
+    width: 100px;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navlinks ul {
+    display: flex;
+    list-style: none;
+}
+
+.navlinks ul li {
+    margin: 0 0.55rem;
+    padding: 0.25rem;
+}
+
+.main-nav ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(116, 47, 116);
+    font-size: 18px;
+}
+
+.main-nav ul li a::after {
+    content: '';
+    background-color: #f44336;
+    ;
+    height: 3px;
+    display: block;
+    margin: auto;
+    width: 0;
+    /* width: */
+}
+
+.main-nav ul li a:hover::after {
+    width: 100%;
+    transition: 0.5s;
+}
+
+.navdiv {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+
+/* LANDING PAGE */
+
+#landing-page {
+    background: url('GBF-Donatebanner.jpg')no-repeat center center/cover;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.landing-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-50%, -50%); */
+    color: #fff;
+    text-align: center;
+}
+
+.landing-content h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.landing-content p {
+    font-size: 2rem;
+    ;
+}
+
+
+/* FOOTER */
+
+#footer {
+    text-align: center;
+    /* height:100vh; */
+}
+
+#footer h1 {
+    margin: 1rem 0;
+}
+
+#footer p {
+    margin-bottom: 1rem;
+}
+
+.ending {
+    height: 100%;
+    color: #fff;
+    background: #444;
+    padding: 1rem 0rem;
+    opacity: 0.7;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.ending:hover {
+    background: #444;
+    opacity: 1;
+    cursor: pointer;
+}

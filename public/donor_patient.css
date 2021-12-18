@@ -1,0 +1,13 @@
+#page{
+    /* background: url('DonatePants.jpg')no-repeat center center/cover; */
+    height:100vh;
+    width:100%;
+}
+/* html{
+    scroll-behavior: smooth;
+} */
+
+/* UTILITY CLASS  */
+.m-l{
+    margin-left:1rem;
+}

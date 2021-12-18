@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="donorBlood.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+
+{{#d_data}}
+    <form action="/donor_blood_update/{{donor_id}}" class="form-register">
+
+
+      <h3>BLOOD DONOR REGISTRATION FORM</h3>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <br>
+        <input type="text" name="name" placeholder="Enter your name" value="{{donor_name}}">
+      </div>
+      <div class="form-group">
+        <label for="cnic">Cnic</label>
+        <br>
+        <input type="text" name="cnic" placeholder="Enter your cnic" value="{{cnic}}">
+      </div>
+
+      <div class="form-group">
+        <label for="email">email</label>
+        <br>
+        <input type="email" name="email" placeholder="Enter your email" value="{{email}}">
+      </div>
+      <div class="form-group">
+        <label for="bloodType">bloodtype</label>
+        <br>
+        <input type="text" name="bloodtype" placeholder="Enter your Blood Group" value="{{blood_type}}">
+      </div>
+      <div class="form-group">
+        <label for="Age">Age</label>
+        <br>
+        <input type="number" name="age" placeholder="Enter your Age" value="{{age}}">
+      </div>
+      <div class="form-group">
+        <label for="Contact">Contact No</label>
+        <br>
+        <input type="text" name="contact" placeholder="Enter your Contact No" value="{{contact_no}}">
+      </div>
+
+
+
+      <div class="form-group">
+        <label for="City">City</label>
+        <br>
+        <input type="text" name="city" placeholder="Karachi" value="{{city}}">
+      </div>
+      <div class="form-group">
+        <label for="state">State</label>
+        <br>
+        <input type="text" name="state" placeholder="Sindh" value="{{state}}">
+      </div>
+      <div class="form-group">
+        <label for="zip">Zip</label>
+        <br>
+        <input type="text" name="zip" placeholder="7888" value="{{zipcode}}">
+      </div>
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+        Update
+      </button>
+      {{!-- <input type="submit" name="submit" value="submit"> --}}
+
+
+
+    </form>
+    {{/d_data}}
+
+  </div>
+</body>
+</html>

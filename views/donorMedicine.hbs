@@ -1,0 +1,99 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="donorblood.css" />
+
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="form-register">
+
+      <form action="/donor_medicine_submit">
+
+        <h3>MEDICINE DONOR REGISTRATION FORM</h3>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <br />
+          <input type="text" name="name" placeholder="Enter your name"/>
+        </div>
+        <div class="form-group">
+          <label for="cnic">Cnic</label>
+          <br/>
+          <input type="text" name="cnic" placeholder="Enter your cnic"/>
+        </div>
+        
+         <div class="form-group">
+            <label for="contact">Contact No</label>
+            <br>
+            <input type="contact" name="contact"  placeholder="Enter your contact no">
+          </div>
+         <div class="form-group">
+            <label for="email">Email</label>
+            <br>
+            <input type="email" name="email"  placeholder="Enter your email">
+          </div>
+         <div class="form-group">
+            <label for="age">Age</label>
+            <br>
+            <input type="age" name="age"  placeholder="Enter your age">
+          </div>
+          <div class="form-group">
+          <label for="inputAddress">City </label>
+          <br />
+          <input type="text" name="city" placeholder="Enter City" />
+        </div>
+
+          <div class="form-group">
+          <label for="inputAddress">State </label>
+          <br />
+          <input type="text" name="state" placeholder="Enter state" />
+        </div>
+
+          <div class="form-group">
+          <label for="zip">zipcode </label>
+          <br />
+          <input type="number" name="zipcode" placeholder="Enter zipcode" />
+        </div>
+
+        <div class="form-group">
+          <label for="medicineName">Medicine ID</label>
+          <br />
+          <input type="text" name="medicineid" placeholder="Enter Medicine ID" />
+        </div>
+        <div class="form-group">
+          <label for="medicineName">Medicine Name</label>
+          <br />
+          <input type="text" name="medicinename" placeholder="Enter Medicine Name" />
+        </div>
+         <div class="form-group">
+          <label for="Quantity">Quantity</label>
+          <br />
+          <input type="number" name="quantity" />
+        </div>
+        <div class="form-group">
+          <label for="MFG">MFG</label>
+          <br />
+          <input type="date" name="mfg" placeholder="Enter Medicine MFG Date" />
+        </div>
+        <div class="form-group">
+          <label for="EXP">EXP</label>
+          <br />
+          <input type="date" name="exp" placeholder="Enter Medicine EXP Date" />
+        </div>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+          Submit
+        </button>
+            {{!-- <input type="submit" name="submit" value="submit"> --}}
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
