@@ -27,7 +27,7 @@
   <tbody>
     {{#d_details}}
     <tr>
-      <td>{{donor_id}}</td>
+      <td id="donor">{{donor_id}}</td>
       <td>{{donor_name}}</td>
       <td>{{blood_type}}</td>
       <td>{{contact_no}}</td>
@@ -65,6 +65,7 @@
 
   </thead>
   <tbody>
+
     {{#p_list}}
     <tr>
       <th>{{patient_id}}</td>
@@ -77,8 +78,12 @@
       <td>{{hosp_name}}</td>
       <td>{{city}}</td>
       <td>{{zipcode}}</td>
+      
+      <td><a  class="btn btn-primary" href="/proceedbloodpatient/{{patient_id}}/{{patient_name}}" role="button">Proceed</a></td>
     </tr>
     {{/p_list}}
+    
+
   </tbody>
 </table>
     </div>
