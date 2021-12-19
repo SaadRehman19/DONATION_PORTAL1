@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    {{!-- <link href="https://unpkg.com/tailwindcss^2/dist/tailwind.min.css" rel="stylesheet"> --}}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="donorBlood.css">
     
     <title>Document</title>
@@ -21,33 +22,50 @@
             <div class="form-group">
               <label for="name">Name</label>
               <br>
-              <input type="text" name="name" placeholder="Enter your name">
+              <input id="name" type="text" class="form-control" name="name" placeholder="Enter your name">
+              <div class="invalid-feedback">
+                Name must be between 3 and 10 characters
+              </div>
             </div>
-            <div class="form-group">
+
+             <div class="form-group">
               <label for="cnic">Cnic</label>
               <br>
-              <input type="text" name="cnic" placeholder="Enter your cnic">
+              <input id="cnic" type="text" class="form-control" name="cnic" placeholder="Enter your cnic">
+               <div class="invalid-feedback">
+                Cnic should be in correct format (#####-#######-#)
+              </div>
             </div>
             
              <div class="form-group">
-            <label for="email">email</label>
+            <label for="email">Email</label>
             <br>
-            <input type="email" name="email"  placeholder="Enter your email">
+            <input type="email" name="email" class="form-control" placeholder="Enter your email">
           </div>
+
           <div class="form-group">
-            <label for="bloodType">bloodtype</label>
+            <label for="bloodType">Bloodtype</label>
             <br>
-            <input type="text" name="bloodtype"  placeholder="Enter your Blood Group">
+            <input id="bldgrp" type="text" name="bloodtype" class="form-control" placeholder="Enter your Blood Group">
+             <div class="invalid-feedback">
+                Please Enter correct Blood Group
+              </div>
           </div>
           <div class="form-group">
             <label for="Age">Age</label>
             <br>
-            <input type="number" name="age" placeholder="Enter your Age">
+            <input id="age" type="number" name="age" class="form-control" placeholder="Enter your Age">
+            <div class="invalid-feedback">
+                Please Enter Correct Contact Number
+              </div>
           </div>
           <div class="form-group">
             <label for="Contact">Contact No</label>
             <br>
-            <input type="text" name="contact" placeholder="Enter your Contact No">
+            <input id="contact" type="text" name="contact" class="form-control" placeholder="Enter your Contact No">
+             <div class="invalid-feedback">
+                You are not Eligible to donate blood
+              </div>
           </div>
            
           
@@ -62,19 +80,23 @@
               <br>
               <input type="text" name="state" placeholder="Sindh">
             </div>
-            <div class="form-group">
+
+             <div class="form-group"> 
               <label for="zip">Zip</label>
               <br>
-              <input type="text" name="zip" placeholder="7888">
+              <input type="number" name="zip" class="form-control" placeholder="78888">
+             
             </div>
-            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-            Submit
-          </button>
-            {{!-- <input type="submit" name="submit" value="submit"> --}}
-          
-        
+            <button class="btn btn-success ml-3 mb-1">Submit</button>
          
         </form>
     </div>
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <script src='validation.js'></script>
+
+     
 </body>
-</html>
+</html> 
