@@ -130,6 +130,8 @@ app.get('/donor_blood_submit', function(req, res) {
                                                                         throw err;
                                                                     if (del_d.affectedRows > 0 && del_p.affectedRows > 0) {
                                                                         res.send("done");
+                                                                        // res.render("donor_patient")
+
                                                                     }
                                                                 })
                                                             })
@@ -248,6 +250,8 @@ app.get('/donor_medicine_submit', function(req, res) {
                                                                             throw err;
                                                                         if (del_d.affectedRows > 0 && del_p.affectedRows > 0) {
                                                                             res.send("done");
+                                                                            // res.render("donor_patient")
+
                                                                         }
                                                                     })
                                                                 })
@@ -374,7 +378,9 @@ app.get('/patient_blood_submit', function(req, res) {
                                                                             if (err)
                                                                                 throw err;
                                                                             if (del_d.affectedRows > 0 && del_p.affectedRows > 0) {
-                                                                                res.send("done");
+                                                                                // res.send("done");
+                                                                                res.render("donor_patient")
+
                                                                             }
                                                                         })
                                                                     })
@@ -496,7 +502,8 @@ app.get('/patient_medicine_submit', function(req, res) {
                                                                         if (err)
                                                                             throw err;
                                                                         if (del_d.affectedRows > 0 && del_p.affectedRows > 0) {
-                                                                            res.send("done");
+                                                                            // res.send("done");
+                                                                            res.render("donor_patient")
                                                                         }
                                                                     })
                                                                 })
@@ -605,7 +612,7 @@ app.get('/donor_blood_update/:donor_id', function(req, res) {
     var d_id = req.params.donor_id;
     const { name, cnic, email, bloodtype, age, contact, city, state, zip } = req.query;
     let q1 = 'update donor set donor_name=?,cnic=? ,email=?, age=? ,contact_no=?, state=?, city=?, zipcode=? where donor_id=?'
-    connection.query(q1, [name, cnic, email, age, contact, city, state, zip, d_id], function(err, results) {
+    connection.query(q1, [name, cnic, email, age, contact, state, city, zip, d_id], function(err, results) {
         let q2 = 'update blood_donor set blood_type=? where donor_id=?';
         connection.query(q2, [bloodtype, d_id], function(err, results1) {
             // if(results.affectedRows>0 && results1.affectedRows>0)
